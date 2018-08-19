@@ -1,0 +1,29 @@
+This work is a simple implementation of the one time pad algorithm for crypt and decrypt binary files or images (using the PIL library of python).
+
+You can execute the script main.py or directly use the specific script you need in the folder scripts.
+
+When you execute main.py, you'll use the following options : 
+	-c or --crypt to specify that you want to crypt a file.
+	-d or --decrypt to specify that you want to decrypt a file.
+	-p or --picture to specify that you'll work with an image file.
+	-i or --input followed by the input file path
+	-o or --output followed by the output file name we want
+	-k or --key followed by the key file path (if we want do decrypt something)
+
+You can also use the scripts that are in the "scripts" folder, using the same options.
+
+For example, to crypt an image file, you can do :
+	python main.py -c -p -i 'the image.extension(jpeg, png...)' -o 'output file name.extension'
+	or, from the scripts directory:
+	python cryptImg.py -i 'the image.extension(jpeg, png...)' -o 'output file name.extension'
+
+another example, to decrypt a file (of any type), you can do :
+	python main.py -d -i 'input file name' -o 'output file name' -k 'the key file name (generated after the encryption)'
+	or, from the scripts directory:
+	python decryptage.py -i 'input file name' -o 'output file name' -k 'the key file name (generated after the encryption)'
+
+If a picture generate some errors of unprecision in the decryption (especially for jpg/jpeg images), you can consider the picture as a binary file and use the cryptage.py script instead of cryptImg.py.
+
+In case of problem or disfunctionment, please contact me at : gm_djemai@esi.dz
+
+Thank's
